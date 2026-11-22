@@ -1,4 +1,4 @@
-# Pronóstico de llamadas de un call center
+# Pronóstico de llamadas de un Call Center - Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E?logo=scikitlearn&logoColor=white)
