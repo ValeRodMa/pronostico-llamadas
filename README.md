@@ -8,7 +8,7 @@ Trabajo final de **Machine Learning** de la Universidad Católica del Uruguay (U
 
 El proyecto predice cuántas llamadas van a entrar a un call center en **cada una de las 168 horas de la semana siguiente** y traduce ese pronóstico a una decisión concreta: **cuántos operadores hacen falta en cada franja** para cumplir el nivel de servicio (80 % de las llamadas atendidas en menos de 20 segundos).
 
-Se trabajó con datos reales de un call center de Uruguay, del 17/11/2025 al 16/11/2026, agregados por hora y anonimizados.
+Se trabajó con datos reales de un call center, del 17/11/2025 al 16/11/2026, agregados por hora y anonimizados.
 
 ---
 
