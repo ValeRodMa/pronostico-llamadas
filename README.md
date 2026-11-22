@@ -10,6 +10,8 @@ El proyecto predice cuántas llamadas van a entrar a un call center en **cada un
 
 Se trabajó con datos reales de un call center, del 17/11/2025 al 16/11/2026, agregados por hora y anonimizados.
 
+📄 **[Acceda al informe final aquí](informe/VRM_Pronostico%20Llamadas%20CallCenter.pdf)**
+
 ---
 
 ## Contenido
@@ -43,7 +45,7 @@ Comparación de modelos con **validación walk-forward de 8 semanas**, medida so
 - **El escenario alto está calibrado.** El cuantil 0,8 cubre el 82,1 % de las horas en datos no vistos, por eso se usa para dimensionar.
 - **Impacto en la operación.** Con la dotación propuesta, Erlang A estima que se atendería el 96 % de las llamadas, contra un 83,7 % histórico.
 
-El análisis completo está en el [informe](informe/informe.docx).
+El análisis completo está en el [informe](informe/VRM_Pronostico%20Llamadas%20CallCenter.pdf).
 
 ---
 
@@ -179,7 +181,8 @@ pronostico-llamadas/
 │   ├── test_datos.py      # Detección de formato y carga del reporte por hora
 │   └── test_erlang.py
 └── informe/
-    └── informe.docx       # Informe: marco teórico, metodología y resultados
+    ├── VRM_Pronostico Llamadas CallCenter.pdf    # Informe final
+    └── VRM_Pronostico Llamadas CallCenter.docx   # Versión editable en Word
 ```
 
 ---
