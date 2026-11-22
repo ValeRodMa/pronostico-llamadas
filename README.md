@@ -127,14 +127,16 @@ Incluyen un test que verifica que **ninguna feature use datos del futuro**.
 
 ## Datos y privacidad
 
-El repositorio incluye los datos reales usados en el informe: [`data/raw/llamadas.csv`](data/raw/llamadas.csv). Es el reporte "Datos de las Colas" del 17/11/2025 al 16/11/2026, **agregado por hora y sin datos personales** (solo cantidades de llamadas y tiempos). Con este archivo, `python main.py evaluar` reproduce exactamente la tabla de resultados del informe.
+El repositorio incluye los datos reales usados en el informe: [`data/raw/llamadas.csv`](data/raw/llamadas.csv). Es el reporte "Datos de las Colas" del 17/11/2025 al 16/11/2026, **agregado por hora y sin datos personales** (solo cantidades de llamadas y tiempos).
 
-Para usar otros datos, se reemplaza ese archivo o se pasa otra ruta con `--datos`. Se aceptan dos formatos, que se detectan automáticamente por las columnas (`src/datos.py`):
+> **No hace falta descargar ni cargar ningún archivo aparte.** Al clonar el repositorio, la app y `main.py` usan estos datos automáticamente, y `python main.py evaluar` reproduce exactamente la tabla de resultados del informe.
+
+### Usar otros datos (opcional)
+
+Solo si se quiere probar con datos distintos a los del informe: se reemplaza ese archivo, se pasa otra ruta con `--datos` o se sube desde el menú de la izquierda de la app (`.csv` o `.xlsx`). Se aceptan dos formatos, que se detectan automáticamente por las columnas (`src/datos.py`):
 
 - **Reporte "Datos de las Colas"**: ya agregado, una fila por hora, sin datos personales.
 - **Export por llamada**: una fila por llamada (como el dataset simulado).
-
-También se pueden cargar desde la app, en `.csv` o `.xlsx`.
 
 Antes de cualquier análisis se **eliminan las columnas con datos personales** (teléfono, id de cliente, operador). Si el export usa otros nombres de columna, hay que ajustar el diccionario `COLUMNAS` en `src/datos.py`.
 
