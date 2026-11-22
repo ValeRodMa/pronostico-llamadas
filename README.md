@@ -93,7 +93,7 @@ streamlit run app.py
 
 Se abre en el navegador en <http://localhost:8501>. La app recorre todo el proceso paso a paso: datos crudos, anonimización, exploración, features, validación, comparación de modelos, incertidumbre y pronóstico.
 
-Si no hay datos reales, la primera vez genera datos simulados para que se pueda probar igual.
+Por defecto usa los datos reales incluidos en `data/raw/llamadas.csv`. Si ese archivo no está, genera datos simulados para que se pueda probar igual.
 
 ### Línea de comandos
 
@@ -127,9 +127,9 @@ Incluyen un test que verifica que **ninguna feature use datos del futuro**.
 
 ## Datos y privacidad
 
-Los datos reales **no se suben al repositorio**. Van en `data/raw/llamadas.csv`, que está en el `.gitignore`.
+El repositorio incluye los datos reales usados en el informe: [`data/raw/llamadas.csv`](data/raw/llamadas.csv). Es el reporte "Datos de las Colas" del 17/11/2025 al 16/11/2026, **agregado por hora y sin datos personales** (solo cantidades de llamadas y tiempos). Con este archivo, `python main.py evaluar` reproduce exactamente la tabla de resultados del informe.
 
-Se aceptan dos formatos, que se detectan automáticamente por las columnas (`src/datos.py`):
+Para usar otros datos, se reemplaza ese archivo o se pasa otra ruta con `--datos`. Se aceptan dos formatos, que se detectan automáticamente por las columnas (`src/datos.py`):
 
 - **Reporte "Datos de las Colas"**: ya agregado, una fila por hora, sin datos personales.
 - **Export por llamada**: una fila por llamada (como el dataset simulado).
@@ -147,6 +147,8 @@ pronostico-llamadas/
 ├── app.py                 # App de Streamlit con el recorrido paso a paso
 ├── main.py                # El mismo pipeline desde la terminal
 ├── requirements.txt
+├── data/
+│   └── raw/llamadas.csv   # Datos reales agregados por hora (los del informe)
 ├── src/
 │   ├── datos.py           # Carga, anonimización, agregación por hora y simulación
 │   ├── features.py        # Calendario, feriados de Uruguay, lags y medias móviles
