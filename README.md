@@ -72,14 +72,29 @@ flowchart LR
 
 Requisitos: **Python 3.10 o superior**.
 
+**Mac / Linux:**
+
+```bash
+git clone https://github.com/ValeRodMa/pronostico-llamadas.git
+cd pronostico-llamadas
+
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Windows:**
+
 ```bash
 git clone https://github.com/ValeRodMa/pronostico-llamadas.git
 cd pronostico-llamadas
 
 python -m venv .venv
-source .venv/bin/activate        # en Windows: .venv\Scripts\activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
+
+Una vez activado el entorno virtual (aparece `(.venv)` al principio de la terminal), los comandos `python` y `pip` ya funcionan en cualquier sistema. Si se abre una terminal nueva, hay que volver a entrar a la carpeta y activarlo con `source .venv/bin/activate` (o `.venv\Scripts\activate` en Windows).
 
 ---
 
